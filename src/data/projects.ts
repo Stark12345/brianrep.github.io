@@ -8,7 +8,7 @@ import TailwindIcon from '../assets/logos/Tailwind-logo.svg?raw';
 
 export const projects = [
 	{
-		title: "Workflow Automation Orchestrator (n8n)",
+		title: "SER UNO NUTRICION",
 		techStack: "n8n • Node.js • TypeScript • PostgreSQL",
 		description: "Event‑driven workflows for data sync, notifications, and back‑office automation. Custom nodes, secrets management, retries, and metrics.",
 		ctaText: "View Repo →",
@@ -16,7 +16,7 @@ export const projects = [
 		icon: N8nIcon
 	},
 	{
-		title: "SaaS API Starter (Auth, Billing, RBAC)",
+		title: "JDI GRUPO CONSTRUCTOR SAC",
 		techStack: "Node.js • TypeScript • PostgreSQL • Supabase • Stripe",
 		description: "Production‑ready REST/GraphQL API with JWT auth, role‑based access, Stripe subscriptions, and rate‑limited endpoints.",
 		ctaText: "Get Source < / >",
