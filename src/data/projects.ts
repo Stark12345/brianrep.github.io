@@ -23,7 +23,7 @@ export const projects = [
 		ctaLink: "#",
 		icon: SupabaseIcon
 	},
-	{/*{
+	/*{
 		title: "Realtime Chat Service",
 		techStack: "Phoenix • WebSockets • Redis • Docker",
 		description: "Low‑latency chat with channels, presence, and backpressure handling. Includes load tests and horizontal scaling notes.",
@@ -54,5 +54,5 @@ export const projects = [
 		ctaText: "Docs →",
 		ctaLink: "#",
 		icon: TailwindIcon
-	},*/}
+	},*/
 ];
