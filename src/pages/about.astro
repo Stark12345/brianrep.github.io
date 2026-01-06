@@ -1,27 +1,57 @@
 ---
 import Layout from '../layouts/BlogPost.astro';
 import GlowLineSeparator from '@/components/ui/separator/GlowLineSeparator.astro';
-const pageTitle = 'About Me';
-const pageDescription = 'Learn more about my background and approach to software engineering.';
+
+const pageTitle = 'Sobre mí';
+const pageDescription =
+  'Acompaño a empresas en la optimización de procesos mediante automatización y análisis de datos.';
 ---
 
-<Layout title={pageTitle} description={pageDescription} pubDate={new Date()} showHeader={false}>
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  pubDate={new Date()}
+  showHeader={false}
+>
   <p>
-    Hey! I'm a senior software engineer who loves designing reliable systems and shipping products that feel great to use.
+    Ayudo a empresas a optimizar su operación mediante automatización de procesos
+    y análisis de información, reduciendo tareas manuales, errores operativos y
+    tiempos de ejecución.
   </p>
+
   <p>
-    I work across the stack with TypeScript, Node.js, React/Next.js, and PostgreSQL. I care deeply about readable code,
-    strong tests, and observability. My approach: ship small, iterate quickly, measure outcomes.
+    Mi trabajo se centra en ordenar datos, integrar sistemas y construir
+    soluciones prácticas que brinden información clara para una mejor toma de
+    decisiones. Priorizo implementaciones simples, sostenibles y alineadas a la
+    realidad del negocio.
   </p>
+
   <p>
-    Recent highlights include leading a migration from a monolith to well‑scoped services, improving p95 latency,
-    and introducing CI/CD with preview environments and quality gates.
+    He colaborado con organizaciones de distintos sectores apoyando la mejora de
+    flujos operativos, el control de indicadores clave y la consolidación de
+    información para equipos de gestión.
   </p>
+
   <p>
-    Outside of feature work, I enjoy mentoring, documentation, and building design‑system components that make teams faster.
-    Always learning—and always happy to collaborate on meaningful problems.
+    Más allá de la tecnología, me involucro entendiendo el contexto de cada
+    organización, trabajando de forma cercana con los equipos y enfocándome en
+    mejoras que generen impacto real desde el primer día.
   </p>
 
   <GlowLineSeparator />
 
+  <div class="mt-8 flex flex-col items-center gap-3">
+    <a
+      href="/brianrep.github.io/CV_OscarNunezESP-2025.pdf"
+      target="_blank"
+      rel="noopener"
+      class="sw-btn"
+    >
+      Descargar CV (PDF)
+    </a>
+
+    <p class="text-sm text-[color:var(--color-text-muted)] text-center max-w-md">
+      El CV contiene el detalle técnico y la experiencia completa.
+    </p>
+  </div>
 </Layout>
