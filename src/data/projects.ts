@@ -6,7 +6,7 @@ import PythonIcon from '../assets/logos/Python-logo.svg?raw';
 import TailwindIcon from '../assets/logos/Tailwind-logo.svg?raw';
 import SerUnoLogo from "../assets/logos/Ser1.png";
 import JdiLogo from "../assets/logos/Jdi.png";
-import { Image } from "astro:assets";
+
 
 
 
