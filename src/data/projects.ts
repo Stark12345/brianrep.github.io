@@ -9,18 +9,18 @@ import TailwindIcon from '../assets/logos/Tailwind-logo.svg?raw';
 export const projects = [
 	{
 		title: "SER UNO NUTRICION",
-		techStack: "n8n • Node.js • TypeScript • PostgreSQL",
-		description: "Event‑driven workflows for data sync, notifications, and back‑office automation. Custom nodes, secrets management, retries, and metrics.",
-		ctaText: "View Repo →",
-		ctaLink: "#",
+		techStack: " Power BI • Consolidación de datos • Automatización de reportes • KPIs",
+		description: "Solución de análisis que centraliza la información de sedes, ventas y desempeño, permitiendo identificar oportunidades de mejora y optimizar la operación del negocio nutricional.",
+		ctaText: "Solicitar Ejemplo",
+		ctaLink: "https://wa.me/51940167360?text=Hola%20Brian,%20quisiera%20conversar%20sobre%20una%20solución%20similar%20a%20la%20mostrada%20en%20tu%20web.",
 		icon: N8nIcon
 	},
 	{
 		title: "JDI GRUPO CONSTRUCTOR SAC",
-		techStack: "Node.js • TypeScript • PostgreSQL • Supabase • Stripe",
-		description: "Production‑ready REST/GraphQL API with JWT auth, role‑based access, Stripe subscriptions, and rate‑limited endpoints.",
-		ctaText: "Get Source < / >",
-		ctaLink: "#",
+		techStack: "Looker Studio • Análisis financiero • KPIs • Control presupuestal",
+		description: "Se optimizó el control financiero mediante un tablero que centraliza ingresos, gastos y caja chica, permitiendo detectar desviaciones y mejorar la gestión de recursos.",
+		ctaText: "Solicitar Ejemplo",
+		ctaLink: "https://wa.me/51940167360?text=Hola%20Brian,%20quisiera%20conversar%20sobre%20una%20solución%20similar%20a%20la%20mostrada%20en%20tu%20web.",
 		icon: SupabaseIcon
 	},
 	/*{
