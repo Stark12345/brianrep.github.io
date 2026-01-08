@@ -4,6 +4,8 @@ import SupabaseIcon from '../assets/logos/Supabase-logo.svg?raw';
 import PosthogIcon from '../assets/logos/posthog-logo.svg?raw';
 import PythonIcon from '../assets/logos/Python-logo.svg?raw';
 import TailwindIcon from '../assets/logos/Tailwind-logo.svg?raw';
+import SerUnoLogo from "../assets/logos/Ser1.png";
+import JdiLogo from "../assets/logos/Jdi.png";
 
 
 export const projects = [
@@ -13,7 +15,7 @@ export const projects = [
 		description: "Solución de análisis que centraliza la información de sedes, ventas y desempeño, permitiendo identificar oportunidades de mejora y optimizar la operación del negocio nutricional.",
 		ctaText: "Solicitar Ejemplo",
 		ctaLink: "https://wa.me/51940167360?text=Hola%20Brian,%20quisiera%20conversar%20sobre%20una%20solución%20similar%20a%20la%20mostrada%20en%20tu%20web.",
-		icon: "/Ser1.png"
+		icon: SerUnoLogo,
 	},
 	{
 		title: "JDI GRUPO CONSTRUCTOR SAC",
@@ -21,7 +23,7 @@ export const projects = [
 		description: "Solución integral de control financiero mediante un tablero que centraliza ingresos, gastos y caja chica, permitiendo detectar desviaciones y mejorar la gestión de recursos.",
 		ctaText: "Solicitar Ejemplo",
 		ctaLink: "https://wa.me/51940167360?text=Hola%20Brian,%20quisiera%20conversar%20sobre%20una%20solución%20similar%20a%20la%20mostrada%20en%20tu%20web.",
-		icon: "/Jdi.png"
+		icon: JdiLogo,
 	},
 	/*{
 		title: "Realtime Chat Service",
