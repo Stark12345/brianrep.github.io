@@ -13,15 +13,15 @@ export const projects = [
 		description: "Solución de análisis que centraliza la información de sedes, ventas y desempeño, permitiendo identificar oportunidades de mejora y optimizar la operación del negocio nutricional.",
 		ctaText: "Solicitar Ejemplo",
 		ctaLink: "https://wa.me/51940167360?text=Hola%20Brian,%20quisiera%20conversar%20sobre%20una%20solución%20similar%20a%20la%20mostrada%20en%20tu%20web.",
-		icon: N8nIcon
+		icon: "/brianrep.github.io/Ser1.png"
 	},
 	{
 		title: "JDI GRUPO CONSTRUCTOR SAC",
 		techStack: "Looker Studio • Análisis financiero • KPIs • Control presupuestal",
-		description: "Se optimizó el control financiero mediante un tablero que centraliza ingresos, gastos y caja chica, permitiendo detectar desviaciones y mejorar la gestión de recursos.",
+		description: "Solución integral de control financiero mediante un tablero que centraliza ingresos, gastos y caja chica, permitiendo detectar desviaciones y mejorar la gestión de recursos.",
 		ctaText: "Solicitar Ejemplo",
 		ctaLink: "https://wa.me/51940167360?text=Hola%20Brian,%20quisiera%20conversar%20sobre%20una%20solución%20similar%20a%20la%20mostrada%20en%20tu%20web.",
-		icon: SupabaseIcon
+		icon: "/brianrep.github.io/Jdi.png"
 	},
 	/*{
 		title: "Realtime Chat Service",
