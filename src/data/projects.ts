@@ -6,26 +6,30 @@ import PythonIcon from '../assets/logos/Python-logo.svg?raw';
 import TailwindIcon from '../assets/logos/Tailwind-logo.svg?raw';
 import SerUnoLogo from "../assets/logos/Ser1.png";
 import JdiLogo from "../assets/logos/Jdi.png";
+import DashSerUno from "../assets/dashboards/DASH1.png";
+import DashJdi from "../assets/dashboards/DASH2.png";
 
 
 
 
 export const projects = [
 	{
-		title: "SER UNO NUTRICION",
+		title: "SER UNO NUTRICION - LIMA - PERU",
 		techStack: " Power BI • Consolidación de datos • Automatización de reportes • KPIs",
 		description: "Solución de análisis que centraliza la información de sedes, ventas y desempeño, permitiendo identificar oportunidades de mejora y optimizar la operación del negocio nutricional.",
 		ctaText: "Solicitar Ejemplo",
 		ctaLink: "https://wa.me/51940167360?text=Hola%20Brian,%20quisiera%20conversar%20sobre%20una%20solución%20similar%20a%20la%20mostrada%20en%20tu%20web.",
 		icon: SerUnoLogo,
+		image: DashSerUno,
 	},
 	{
-		title: "JDI GRUPO CONSTRUCTOR SAC",
+		title: "JDI GRUPO CONSTRUCTOR SAC - LIMA - PERU",
 		techStack: "Looker Studio • Análisis financiero • KPIs • Control presupuestal",
 		description: "Solución integral de control financiero mediante un tablero que centraliza ingresos, gastos y caja chica, permitiendo detectar desviaciones y mejorar la gestión de recursos.",
 		ctaText: "Solicitar Ejemplo",
 		ctaLink: "https://wa.me/51940167360?text=Hola%20Brian,%20quisiera%20conversar%20sobre%20una%20solución%20similar%20a%20la%20mostrada%20en%20tu%20web.",
 		icon: JdiLogo,
+		image: DashJdi, 
 	},
 	/*{
 		title: "Realtime Chat Service",
