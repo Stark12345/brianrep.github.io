@@ -20,57 +20,57 @@ const { title } = Astro.props as Props;
 
     <div class="flex flex-col gap-6">
       {projects.map((p) => (
-        <article class="card-surface p-6 md:p-8 rounded-xl relative overflow-hidden">
+      <article class="card-surface p-6 md:p-8 rounded-xl relative overflow-hidden">
 
-          {/* LOGO PEQUEÑO DEL CLIENTE */}
-          {p.icon && (
-            <img
-              src={p.icon.src}
-              alt={`${p.title} logo`}
-              class="absolute right-6 top-6 w-12 h-12 object-contain opacity-90"
-              loading="lazy"
-            />
-          )}
+  {/* LOGO PEQUEÑO DEL CLIENTE */}
+  {p.icon && (
+    <img
+      src={p.icon.src}
+      alt={`${p.title} logo`}
+      class="absolute right-6 top-6 w-12 h-12 object-contain opacity-90"
+      loading="lazy"
+    />
+  )}
 
-          {/* TÍTULO */}
-          <h3 class="text-xl md:text-2xl font-semibold text-foreground m-0">
-            {p.title}
-          </h3>
+  {/* CONTENIDO DE TEXTO */}
+  <div class="max-w-3xl">
+    <h3 class="text-xl md:text-2xl font-semibold text-foreground m-0">
+      {p.title}
+    </h3>
 
-          {/* CONTEXTO / STACK */}
-          {p.techStack && (
-            <p class="mt-1 text-sm text-[color:var(--color-text-muted)]">
-              {p.techStack}
-            </p>
-          )}
+    {p.techStack && (
+      <p class="mt-1 text-sm text-[color:var(--color-text-muted)]">
+        {p.techStack}
+      </p>
+    )}
 
-          {/* DESCRIPCIÓN */}
-          <p class="mt-4 text-[color:var(--color-text-secondary)] max-w-3xl">
-            {p.description}
-          </p>
+    <p class="mt-4 text-[color:var(--color-text-secondary)]">
+      {p.description}
+    </p>
+  </div>
 
-          {/* IMAGEN DEL DASHBOARD */}
-          {p.image && (
-            <div class="mt-6">
-              <img
-                src={p.image.src}
-                alt={`Dashboard ${p.title}`}
-                class="w-full rounded-xl border border-white/5 shadow-lg"
-                loading="lazy"
-              />
-            </div>
-          )}
+  {/* SEPARADOR + IMAGEN */}
+  {p.image && (
+    <div class="mt-8 pt-6 border-t border-white/5">
+      <img
+        src={p.image.src}
+        alt={`Dashboard ${p.title}`}
+        class="w-full rounded-xl border border-white/10 shadow-xl bg-black/20"
+        loading="lazy"
+      />
+    </div>
+  )}
 
-          {/* CTA AL FINAL */}
-          {p.ctaText && p.ctaLink && (
-            <div class="mt-6">
-              <Button href={p.ctaLink} variant="secondary" size="sm">
-                {p.ctaText}
-              </Button>
-            </div>
-          )}
+  {/* CTA CENTRADO */}
+  {p.ctaText && p.ctaLink && (
+    <div class="mt-8 flex justify-center">
+      <Button href={p.ctaLink} variant="secondary" size="sm">
+        {p.ctaText}
+      </Button>
+    </div>
+  )}
 
-        </article>
+</article>
       ))}
     </div>
   </div>
