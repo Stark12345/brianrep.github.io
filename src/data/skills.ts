@@ -11,23 +11,23 @@ export const skills = [
   },*/
   {
     icon: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a3 3 0 110 6 3 3 0 010-6zm0 6v6m0 0a3 3 0 100 6 3 3 0 000-6zm0 0a3 3 0 10-6 0 3 3 0 006 0zm6 0a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
-    title: "Data Analysis & Business Intelligence",
-    description: "Análisis y visualización de datos para convertir información dispersa en indicadores claros, reportes ejecutivos y tableros de control que apoyan la toma de decisiones estratégicas y el seguimiento del desempeño del negocio.",
+    title: "Análisis y Control del Negocio (BI)",
+    description: "Centralizo y analizo la información de tu empresa para mostrarte, en un solo tablero, cómo están tus ventas, costos, márgenes y resultados, facilitando decisiones claras y oportunas.",
   },
   {
     icon: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C7 3 4 4.79 4 7v10c0 2.21 3 4 8 4s8-1.79 8-4V7c0-2.21-3-4-8-4zm0 2c3.87 0 6 .93 6 2s-2.13 2-6 2-6-.93-6-2 2.13-2 6-2zm0 6c3.87 0 6 .93 6 2s-2.13 2-6 2-6-.93-6-2 2.13-2 6-2z"/></svg>`,
-    title: "APIs & Distributed Systems",
-    description: "Extracción e integración de información desde múltiples fuentes (sistemas internos, APIs, archivos y plataformas externas), centralizando los datos en un solo lugar para asegurar consistencia, trazabilidad y disponibilidad operativa.",
+    title: "Integración de Información y Sistemas (APIs)",
+    description: "Conecto información que hoy está separada (Excel, sistemas internos, plataformas externas) para que todos los datos trabajen juntos y tengas una visión completa y confiable del negocio.",
   },
   {
     icon: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm-1 15l-4-4 1.41-1.41L11 14.17l6.59-6.59L19 9l-8 8z"/></svg>`,
-    title: "Databases & Data Management",
-    description: "Diseño y estructuración de bases de datos para un manejo ordenado, seguro y escalable de la información, facilitando consultas rápidas, reportes confiables y crecimiento futuro sin reprocesos innecesarios.",
+    title: "Gestión y Organización de Datos (Bases de Datos)",
+    description: "Estructuro y ordeno la información de tu empresa para evitar errores, duplicidades y pérdidas de datos, asegurando reportes consistentes y crecimiento ordenado.",
   },
   {
     icon: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 18H6a4 4 0 010-8 5 5 0 019.9-1.5A4.5 4.5 0 1119 18z"/></svg>`,
-    title: "Automation & Process Optimization",
-    description: "Automatización de flujos de datos, reportes y procesos repetitivos para reducir errores manuales, ahorrar tiempo operativo y asegurar que la información crítica esté siempre actualizada y disponible cuando se necesita.",
+    title: "Automatización y Optimización de Procesos",
+    description: "Automatizo flujos de datos y procesos repetitivos para reducir tareas manuales, minimizar errores y asegurar que la información esté siempre actualizada y disponible.",
   },
 ];
 
