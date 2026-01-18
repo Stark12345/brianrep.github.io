@@ -12,7 +12,7 @@ export const skills = [
   {
     icon: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a3 3 0 110 6 3 3 0 010-6zm0 6v6m0 0a3 3 0 100 6 3 3 0 000-6zm0 0a3 3 0 10-6 0 3 3 0 006 0zm6 0a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
     title: "Análisis y Control del Negocio (BI)",
-    description: "Centralizo y analizo la información de tu empresa para mostrarte, en un solo tablero, cómo están tus ventas, costos, márgenes y resultados, facilitando decisiones claras y oportunas.",
+    description: "Centralizamos y analizamos la información de tu empresa para mostrarte, en un solo tablero, cómo están tus ventas, costos, márgenes y resultados, facilitando decisiones claras y oportunas.",
   },
   {
     icon: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C7 3 4 4.79 4 7v10c0 2.21 3 4 8 4s8-1.79 8-4V7c0-2.21-3-4-8-4zm0 2c3.87 0 6 .93 6 2s-2.13 2-6 2-6-.93-6-2 2.13-2 6-2zm0 6c3.87 0 6 .93 6 2s-2.13 2-6 2-6-.93-6-2 2.13-2 6-2z"/></svg>`,
