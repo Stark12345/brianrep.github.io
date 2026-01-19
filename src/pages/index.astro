@@ -29,20 +29,30 @@ import figmaLogo from '../assets/logos/Figma-logo.svg';
 <!doctype html>
 <html lang="en" data-theme="dark" class="dark">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    <!-- JSON-LD: Organization -->
-    <script type="application/ld+json" set:html={JSON.stringify({
+  <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+
+  <!-- Open Graph / LinkedIn / WhatsApp -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Procesos simples. Información clara. Mejores decisiones." />
+  <meta property="og:description" content="Análisis de datos, integración de información y automatización de procesos para mejorar la gestión y la toma de decisiones de tu negocio." />
+  <meta property="og:url" content={Astro.site?.toString()} />
+  <meta property="og:image" content={`${Astro.site}og-image.png`} />
+
+  <!-- JSON-LD: Organization -->
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'Organization',
-      name: 'Site Author',
+      name: 'BN Data & Automation',
       url: new URL('/', Astro.site).toString(),
       logo: new URL('/favicon.svg', Astro.site).toString(),
       sameAs: [
-        'https://x.com/guihubie',
         'https://www.linkedin.com/in/briannunezo/',
       ],
-    })} />
-	</head>
+    })}
+  />
+</head>
 	<body>
 		<Header />
 		<main>
