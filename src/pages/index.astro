@@ -5,6 +5,7 @@ import Header from '../components/sections/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 import HeroSection from '../components/sections/HeroSection.astro';
 import SkillsSection from '../components/sections/SkillsSection.astro';
+import PricingSection from '../components/sections/PricingSection.astro';
 import { skills } from '../data/skills';
 import WorkExperience from '../components/sections/WorkExperience.astro';
 import { work } from '../data/work';
@@ -74,6 +75,7 @@ import figmaLogo from '../assets/logos/Figma-logo.svg';
       <Studies title="Studies" items={studies} />*/}
       <GlowLineSeparator />
     </section>
+     <PricingSection />
 		</main>
 		<Footer />
 	</body>
