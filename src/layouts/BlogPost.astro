@@ -9,7 +9,7 @@ import PostMeta from '../components/ui/meta/PostMeta.astro';
 import ShareButtons from '../components/ui/share/ShareButtons.astro';
 import PostNav from '../components/ui/nav/PostNav.astro';
 
-import type { Lang, routes } from '../i18n/ui';
+import { routes, type Lang } from '../i18n/ui';
 
 type BlogData = CollectionEntry<'blog'>['data'];
 type Props = BlogData & {
@@ -32,13 +32,22 @@ const {
   nextPost = null,
   readingTimeMin = 0,
   lang = 'en',
-  page = 'home'
+  page
 } = Astro.props as Props;
 ---
 
 <html lang={lang} data-theme="dark" class="dark">
   <head>
     <BaseHead title={title} description={description} image={heroImage} />
+
+    {page && (
+      <>
+        <link rel="alternate" hreflang="en" href={new URL(routes.en[page], Astro.site).toString()} />
+        <link rel="alternate" hreflang="es" href={new URL(routes.es[page], Astro.site).toString()} />
+        <link rel="alternate" hreflang="x-default" href={new URL(routes.en[page], Astro.site).toString()} />
+      </>
+    )}
+
     <meta property="og:type" content="article" />
 
     {pubDate && (

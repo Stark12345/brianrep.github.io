@@ -5,7 +5,7 @@ import Header from '../components/sections/Header.astro';
 import HeroSection from '../components/sections/HeroSection.astro';
 import SkillsSection from '../components/sections/SkillsSection.astro';
 import PricingSection from '../components/sections/PricingSection.astro';
-import { skills } from '../data/skills';
+import { getSkills } from '../data/skills';
 import ArrowSeparator from '../components/ui/separator/ArrowSeparator.astro'
 import GlowLineSeparator from '../components/ui/separator/GlowLineSeparator.astro'
 
@@ -60,7 +60,7 @@ const DESCRIPTION =
 
     <section class="py-6">
       <ArrowSeparator />
-      <SkillsSection title="Tools" skills={skills} />
+      <SkillsSection title="Tools" skills={getSkills('en')} />
       <GlowLineSeparator />
     </section>
      <PricingSection lang="en" />

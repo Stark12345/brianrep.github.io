@@ -27,7 +27,7 @@ import Timeline from "../components/ui/timeline/Timeline.astro";
 
 // Data
 import { logos } from "../data/logos";
-import { skills } from "../data/skills";
+import { getSkills } from "../data/skills";
 import { work, workIcons } from "../data/work";
 import { studies } from "../data/studies";
 
@@ -144,13 +144,13 @@ const [firstPost, secondPost, thirdPost] = posts.slice(0, 3);
           <PostMeta pubDate={firstPost.data.pubDate} readingTimeMin={5} authorName={firstPost.data.author} />
           <PostNav prev={secondPost && { id: secondPost.id, title: secondPost.data.title }} next={thirdPost && { id: thirdPost.id, title: thirdPost.data.title }} />
           <ShareButtons title={firstPost.data.title} url={Astro.url.toString()} />
-          <BlogPagination currentPage={2} totalPages={5} />
+          <BlogPagination currentPage={2} totalPages={2} />
         </section>
       )}
 
       <!-- Sections: Skills, Work, Studies, Projects -->
       <section class="space-y-6">
-        <SkillsSection title="Skills & Tools" skills={skills} />
+        <SkillsSection title="Skills & Tools" skills={getSkills('en')} />
         <WorkExperience title="Work Experience" items={work} />
         <Studies title="Studies" items={studies} />
         <ProjectsSection title="Projects" />
