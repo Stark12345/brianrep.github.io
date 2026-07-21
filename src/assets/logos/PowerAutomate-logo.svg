@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <defs>
+    <linearGradient id="paGrad" x1="2" y1="4" x2="22" y2="20" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0066FF"/>
+      <stop offset="1" stop-color="#0ADB75"/>
+    </linearGradient>
+  </defs>
+  <path d="M3 12h14m-5-5l5 5-5 5" fill="none" stroke="url(#paGrad)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="20.5" cy="12" r="2" fill="url(#paGrad)"/>
+</svg>
