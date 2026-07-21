@@ -12,10 +12,14 @@ interface Props {
   /** Etiqueta discreta para el carrusel de herramientas. Las herramientas van SUBORDINADAS
    *  a los problemas: primero qué resolvemos, después con qué. */
   toolsLabel?: string;
+  /** Línea que desactiva la intimidación del carrusel para el lector NO técnico (el dueño de
+   *  PyME reconoce como mucho "Excel"), sin quitarle valor al lector técnico que sí identifica
+   *  el stack. Ver bn_information/simulacion_dueno_restaurantes.md */
+  toolsNote?: string;
   skills: SkillItem[];
 }
 
-const { title, toolsLabel, skills } = Astro.props as Props;
+const { title, toolsLabel, toolsNote, skills } = Astro.props as Props;
 ---
 
 <section class="w-full py-8">
@@ -40,6 +44,11 @@ const { title, toolsLabel, skills } = Astro.props as Props;
       {toolsLabel && (
         <p class="text-center text-sm uppercase tracking-wide text-[color:var(--color-text-muted)] mb-2">
           {toolsLabel}
+        </p>
+      )}
+      {toolsNote && (
+        <p class="text-center text-sm max-w-xl mx-auto mb-4 text-[color:var(--color-text-muted)]">
+          {toolsNote}
         </p>
       )}
       <Carousel tools={logos} />

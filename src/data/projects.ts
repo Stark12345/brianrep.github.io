@@ -20,7 +20,7 @@ const projectsByLang: Record<Lang, Project[]> = {
 			title: "SER UNO NUTRICIÓN — LIMA, PERU",
 			techStack: "Power BI • Data consolidation • Automated reporting • KPIs",
 			description:
-				"Analytics solution that centralizes information across locations, sales and performance, making it possible to spot improvement opportunities and optimize daily operations.",
+				"They had several locations, and to know how the business was doing someone had to pull the numbers from each one by hand. Now they open one screen and see the sales and performance of every store, updated on its own.",
 			ctaText: ui.en["projects.cta"],
 			ctaLink: waLink(ui.en["projects.wa"]),
 			icon: SerUnoLogo,
@@ -30,7 +30,7 @@ const projectsByLang: Record<Lang, Project[]> = {
 			title: "JDI GRUPO CONSTRUCTOR SAC — LIMA, PERU",
 			techStack: "Looker Studio • Financial analysis • KPIs • Budget control",
 			description:
-				"End-to-end financial control solution: a single dashboard for income, expenses and petty cash, making deviations visible early and improving how resources are managed.",
+				"Money was coming in and going out through several places, and they noticed problems too late. Now income, expenses and petty cash live in one place, and they catch it in time when something goes off plan.",
 			ctaText: ui.en["projects.cta"],
 			ctaLink: waLink(ui.en["projects.wa"]),
 			icon: JdiLogo,
@@ -42,7 +42,7 @@ const projectsByLang: Record<Lang, Project[]> = {
 			title: "SER UNO NUTRICION - LIMA - PERU",
 			techStack: " Power BI • Consolidación de datos • Automatización de reportes • KPIs",
 			description:
-				"Solución de análisis que centraliza la información de sedes, ventas y desempeño, permitiendo identificar oportunidades de mejora y optimizar la operación del negocio nutricional.",
+				"Tenían varias sedes y, para saber cómo iba el negocio, alguien tenía que juntar los números de cada una a mano. Ahora abren una sola pantalla y ven las ventas y el rendimiento de todas las tiendas, actualizada sola.",
 			ctaText: ui.es["projects.cta"],
 			ctaLink: waLink(ui.es["projects.wa"]),
 			icon: SerUnoLogo,
@@ -52,7 +52,7 @@ const projectsByLang: Record<Lang, Project[]> = {
 			title: "JDI GRUPO CONSTRUCTOR SAC - LIMA - PERU",
 			techStack: "Looker Studio • Análisis financiero • KPIs • Control presupuestal",
 			description:
-				"Solución integral de control financiero mediante un tablero que centraliza ingresos, gastos y caja chica, permitiendo detectar desviaciones y mejorar la gestión de recursos.",
+				"La plata entraba y salía por varios lados, y los desvíos se notaban tarde. Ahora tienen ingresos, gastos y caja chica en un solo lugar, y se dan cuenta a tiempo cuando algo se sale de lo previsto.",
 			ctaText: ui.es["projects.cta"],
 			ctaLink: waLink(ui.es["projects.wa"]),
 			icon: JdiLogo,
