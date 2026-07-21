@@ -9,21 +9,20 @@ interface SkillItem {
 
 interface Props {
   title?: string;
+  /** Etiqueta discreta para el carrusel de herramientas. Las herramientas van SUBORDINADAS
+   *  a los problemas: primero qué resolvemos, después con qué. */
+  toolsLabel?: string;
   skills: SkillItem[];
 }
 
-const { title, skills } = Astro.props as Props;
+const { title, toolsLabel, skills } = Astro.props as Props;
 ---
 
 <section class="w-full py-8">
   <div class="mx-auto max-w-6xl px-4">
     {title && (
-      <h2 class="text-3xl md:text-4xl font-semibold text-center mb-6 text-foreground">{title}</h2>
+      <h2 class="text-3xl md:text-4xl font-semibold text-center mb-8 text-foreground">{title}</h2>
     )}
-  
-    <div class="mb-6">
-      <Carousel tools={logos} />
-    </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
       {skills.map((skill) => (
@@ -35,6 +34,15 @@ const { title, skills } = Astro.props as Props;
           </div>
         </div>
       ))}
+    </div>
+
+    <div class="mt-14">
+      {toolsLabel && (
+        <p class="text-center text-sm uppercase tracking-wide text-[color:var(--color-text-muted)] mb-2">
+          {toolsLabel}
+        </p>
+      )}
+      <Carousel tools={logos} />
     </div>
   </div>
 </section>
