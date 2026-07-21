@@ -1,0 +1,69 @@
+---
+import Layout from '../../layouts/BlogPost.astro';
+import GlowLineSeparator from '@/components/ui/separator/GlowLineSeparator.astro';
+
+const pageTitle = 'Sobre mí';
+const pageDescription =
+  'Acompaño a empresas en la optimización de procesos mediante automatización y análisis de datos.';
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  pubDate={new Date()}
+  showHeader={false}
+  lang="es"
+  page="about"
+ >
+
+<div class="flex justify-center mb-10">
+  <img
+    src="/BrianFoto.jpg"
+    alt="Brian Núñez"
+    class="w-56 h-56 md:w-64 md:h-64 rounded-2xl object-cover shadow-xl ring-1 ring-[color:var(--color-border)]"
+  />
+</div>
+<div class="flex justify-center mb-10">
+  <div class="w-24 h-[2px] bg-gradient-to-r from-transparent via-[var(--accent)] to-transparent"></div>
+</div>
+
+  <p>
+    Ayudo a empresas a optimizar su operación mediante automatización de procesos y análisis de
+    información, transformando datos en información clara para una mejor toma de decisiones y
+    reduciendo tareas manuales, errores operativos y tiempos de ejecución.
+  </p>
+
+  <p>
+    Soy egresado de la Universidad Peruana de Ciencias Aplicadas (UPC), donde me gradué en 2023.
+    Desde entonces he trabajado con datos en sectores como retail, nutrición y construcción,
+    enfocándome en ordenar información, integrar sistemas y desarrollar soluciones prácticas que
+    apoyen la toma de decisiones de negocio.
+  </p>
+
+  <p>
+    Más allá de la tecnología, me involucro entendiendo el contexto de cada
+    organización, trabajando de forma cercana con los equipos y enfocándome en
+    mejoras que generen impacto real desde el primer día.
+  </p>
+
+  <GlowLineSeparator />
+
+  <div class="mt-8 flex flex-col items-center gap-3">
+    <a
+      href="/CV_OscarNunez_ES.pdf"
+      target="_blank"
+      rel="noopener"
+      class="sw-btn"
+    >
+      Descargar CV (PDF)
+    </a>
+
+    <p class="text-sm text-[color:var(--color-text-muted)] text-center max-w-md">
+      Resumen de mi experiencia profesional.
+    </p>
+  </div>
+
+  <div class="flex justify-center my-16">
+  <div class="w-32 h-[1px] bg-gradient-to-r from-transparent via-[var(--accent)] to-transparent opacity-60"></div>
+</div>
+</Layout>

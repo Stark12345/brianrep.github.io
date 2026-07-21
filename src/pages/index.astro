@@ -2,40 +2,33 @@
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/sections/Footer.astro';
 import Header from '../components/sections/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 import HeroSection from '../components/sections/HeroSection.astro';
 import SkillsSection from '../components/sections/SkillsSection.astro';
 import PricingSection from '../components/sections/PricingSection.astro';
 import { skills } from '../data/skills';
-import WorkExperience from '../components/sections/WorkExperience.astro';
-import { work } from '../data/work';
-import Studies from '../components/sections/Studies.astro';
-import { studies } from '../data/studies';
-import Carousel from '../components/ui/carousel/Carousel.astro';
-import { logos } from '../data/logos';
 import ArrowSeparator from '../components/ui/separator/ArrowSeparator.astro'
 import GlowLineSeparator from '../components/ui/separator/GlowLineSeparator.astro'
 
-
-// Logos
-import astroLogo from '../assets/logos/Astro-logo.svg';
-import googleAdsLogo from '../assets/logos/GoogleAds-logo.svg';
-import posthogLogo from '../assets/logos/posthog-logo.svg';
-import notionLogo from '../assets/logos/Notion-logo.svg';
-import figmaLogo from '../assets/logos/Figma-logo.svg';
-
-// skills are imported from src/data/skills
+const TITLE = 'BN Information — Data & Automation for growing businesses';
+const DESCRIPTION =
+  'I turn scattered business data into clear decisions, and repetitive manual work into automated processes. Dashboards, data integration and workflow automation at a fixed price.';
 ---
 
 <!doctype html>
 <html lang="en" data-theme="dark" class="dark">
 	<head>
-  <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  <BaseHead title={TITLE} description={DESCRIPTION} />
+
+  <!-- Versiones por idioma -->
+  <link rel="alternate" hreflang="en" href={new URL('/', Astro.site).toString()} />
+  <link rel="alternate" hreflang="es" href={new URL('/es/', Astro.site).toString()} />
+  <link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site).toString()} />
 
   <!-- Open Graph / LinkedIn / WhatsApp -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Procesos simples. Información clara. Mejores decisiones." />
-  <meta property="og:description" content="Análisis de datos, integración de información y automatización de procesos para mejorar la gestión y la toma de decisiones de tu negocio." />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Clear numbers. Simple processes. Better decisions." />
+  <meta property="og:description" content="Data analysis, systems integration and process automation, so you can run your business on real numbers." />
   <meta property="og:url" content={Astro.site?.toString()} />
   <meta property="og:image" content={`${Astro.site}og-image.png`} />
 
@@ -45,7 +38,7 @@ import figmaLogo from '../assets/logos/Figma-logo.svg';
     set:html={JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'Organization',
-      name: 'BN Data & Automation',
+      name: 'BN Information',
       url: new URL('/', Astro.site).toString(),
       logo: new URL('/favicon.svg', Astro.site).toString(),
       sameAs: [
@@ -55,27 +48,22 @@ import figmaLogo from '../assets/logos/Figma-logo.svg';
   />
 </head>
 	<body>
-		<Header />
+		<Header lang="en" />
 		<main>
       <HeroSection
-        title="Procesos simples. Información clara. Mejores decisiones."
-        subtitle="Hacemos más fácil y ordenado el trabajo diario de tu negocio."
+        title="Clear numbers. Simple processes. Better decisions."
+        subtitle="I turn scattered business data into clear decisions — and repetitive manual work into processes that run on their own."
         showCTA
-        primaryCTA={{ text: 'Portafolio', href: '/portfolio' }}
-        secondaryCTA={{ text: 'Conócenos', href: '/about' }}
+        primaryCTA={{ text: 'See my work', href: '/portfolio' }}
+        secondaryCTA={{ text: 'About me', href: '/about' }}
       />
-     
 
     <section class="py-6">
       <ArrowSeparator />
-      <SkillsSection title="Herramientas" skills={skills} />   
-      {/*<ArrowSeparator />
-      <WorkExperience title="Work Experience" items={work} />
-      <ArrowSeparator />
-      <Studies title="Studies" items={studies} />*/}
+      <SkillsSection title="Tools" skills={skills} />
       <GlowLineSeparator />
     </section>
-     <PricingSection />
+     <PricingSection lang="en" />
      <GlowLineSeparator />
 		</main>
 		<Footer />

@@ -1,0 +1,71 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/sections/Footer.astro';
+import Header from '../../components/sections/Header.astro';
+import HeroSection from '../../components/sections/HeroSection.astro';
+import SkillsSection from '../../components/sections/SkillsSection.astro';
+import PricingSection from '../../components/sections/PricingSection.astro';
+import { skills } from '../../data/skills';
+import ArrowSeparator from '../../components/ui/separator/ArrowSeparator.astro'
+import GlowLineSeparator from '../../components/ui/separator/GlowLineSeparator.astro'
+
+const TITLE = 'BN Information — Datos y automatización para tu negocio';
+const DESCRIPTION =
+  'Ordeno los números de tu negocio para que sepas al toque cuánto ganas y dónde pierdes plata, y automatizo el trabajo repetitivo que hoy te come horas.';
+---
+
+<!doctype html>
+<html lang="es" data-theme="dark" class="dark">
+	<head>
+  <BaseHead title={TITLE} description={DESCRIPTION} />
+
+  <!-- Versiones por idioma -->
+  <link rel="alternate" hreflang="en" href={new URL('/', Astro.site).toString()} />
+  <link rel="alternate" hreflang="es" href={new URL('/es/', Astro.site).toString()} />
+  <link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site).toString()} />
+
+  <!-- Open Graph / LinkedIn / WhatsApp -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_PE" />
+  <meta property="og:title" content="Números claros. Procesos simples. Mejores decisiones." />
+  <meta property="og:description" content="Ordeno la información de tu negocio y automatizo lo repetitivo, para que tomes decisiones con números reales y no con corazonadas." />
+  <meta property="og:url" content={new URL('/es/', Astro.site).toString()} />
+  <meta property="og:image" content={`${Astro.site}og-image.png`} />
+
+  <!-- JSON-LD: Organization -->
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'BN Information',
+      url: new URL('/es/', Astro.site).toString(),
+      logo: new URL('/favicon.svg', Astro.site).toString(),
+      sameAs: [
+        'https://www.linkedin.com/in/briannunezo/',
+      ],
+    })}
+  />
+</head>
+	<body>
+		<Header lang="es" />
+		<main>
+      <HeroSection
+        title="Números claros. Procesos simples. Mejores decisiones."
+        subtitle="Ordeno la información de tu negocio para que sepas al toque cuánto ganas — y dejo funcionando solo el trabajo repetitivo que hoy te come horas."
+        showCTA
+        primaryCTA={{ text: 'Ver mi trabajo', href: '/portfolio' }}
+        secondaryCTA={{ text: 'Conóceme', href: '/about' }}
+      />
+
+    <section class="py-6">
+      <ArrowSeparator />
+      <SkillsSection title="Herramientas" skills={skills} />
+      <GlowLineSeparator />
+    </section>
+     <PricingSection lang="es" />
+     <GlowLineSeparator />
+		</main>
+		<Footer />
+	</body>
+</html>

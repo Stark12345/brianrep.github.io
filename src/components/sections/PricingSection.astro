@@ -1,136 +1,304 @@
+---
+interface Props {
+  lang?: 'en' | 'es';
+}
+
+const { lang = 'en' } = Astro.props;
+
+const WHATSAPP = '51940167360';
+const wa = (msg: string) => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`;
+
+const content = {
+  en: {
+    heading: 'Packages',
+    subheading: 'Fixed price. Fixed scope. Fixed timeline. No surprises.',
+    popular: 'Most popular',
+    cta: 'Talk on WhatsApp',
+    plans: [
+      {
+        name: 'Data Audit',
+        price: '$290',
+        meta: '1 week',
+        pitch: 'Find out exactly where your business is losing time and money.',
+        features: [
+          'Map of your data: where it lives, who touches it, what is still manual',
+          'Top 3 time and money leaks, quantified in hours and cost',
+          'Prioritized action plan with the expected return of each step',
+          '100% credited toward any package within 30 days',
+        ],
+        msg: 'Hi Brian, I would like information about the Data Audit ($290).',
+        highlight: false,
+      },
+      {
+        name: 'Automation Pilot',
+        price: '$890',
+        meta: '2 weeks',
+        pitch: 'Pick one manual process that eats your week. I leave it running by itself.',
+        features: [
+          'One end-to-end automation live in production',
+          'Connects the tools you already use (spreadsheets, ERP, CRM, email)',
+          'Simple documentation so your team can operate it',
+          'Success metric: hours saved per week, measured before and after',
+        ],
+        msg: 'Hi Brian, I would like information about the Automation Pilot ($890).',
+        highlight: false,
+      },
+      {
+        name: 'Business Dashboard',
+        price: '$1,490',
+        meta: '21 days',
+        pitch: 'See sales, costs, stock and margins on one screen — no manual spreadsheets.',
+        features: [
+          'Up to 3 data sources connected and consolidated',
+          'Up to 8 KPIs defined with you: focus, not clutter',
+          'Clean, reliable and scalable data structure',
+          '2 training sessions so your team runs it on its own',
+          '30-day adjustment guarantee',
+        ],
+        msg: 'Hi Brian, I would like information about the Business Dashboard ($1,490).',
+        highlight: true,
+      },
+    ],
+    retainer: {
+      name: 'Continuity Plan',
+      pitch: 'Your data and automation team — without hiring one.',
+      note: 'No lock-in. First month 50% off when you come from any package above.',
+      tiers: [
+        {
+          name: 'Essential',
+          price: '$490',
+          period: '/month',
+          features: [
+            'Maintenance of everything already built',
+            'Up to 4 hours of changes per month',
+            'WhatsApp support under 48h',
+            'Monthly data health report',
+          ],
+          msg: 'Hi Brian, I would like information about the Continuity Plan - Essential ($490/month).',
+        },
+        {
+          name: 'Growth',
+          price: '$990',
+          period: '/month',
+          features: [
+            'Up to 10 hours per month',
+            'One new automation or improvement every month',
+            'Priority support under 24h',
+            'Monthly training session for your team',
+          ],
+          msg: 'Hi Brian, I would like information about the Continuity Plan - Growth ($990/month).',
+        },
+      ],
+    },
+    trust: '50% upfront / 50% on delivery · Invoice provided · Remote work worldwide (UTC-5)',
+  },
+
+  es: {
+    heading: 'Paquetes',
+    subheading: 'Precio fijo. Alcance fijo. Plazo fijo. Sin sorpresas.',
+    popular: 'Más solicitado',
+    cta: 'Conversemos por WhatsApp',
+    plans: [
+      {
+        name: 'Diagnóstico Exprés',
+        price: 'S/ 550',
+        meta: '1 semana',
+        pitch: 'Te digo exactamente dónde tu negocio está perdiendo tiempo y plata.',
+        features: [
+          'Mapa de tu información: dónde vive, quién la toca, qué se hace a mano',
+          'Las 3 principales fugas de tiempo y dinero, con números',
+          'Plan de acción priorizado: qué hacer primero para ver resultados',
+          '100% descontable si contratas cualquier paquete dentro de 30 días',
+        ],
+        msg: 'Hola Brian, quiero información sobre el Diagnóstico Exprés (S/ 550).',
+        highlight: false,
+      },
+      {
+        name: 'Piloto de Automatización',
+        price: 'S/ 1,850',
+        meta: '2 semanas',
+        pitch: 'Elegimos un proceso manual que te come horas y lo dejo funcionando solo.',
+        features: [
+          'Una automatización completa, funcionando en tu operación',
+          'Se conecta a lo que ya usas (Excel, ERP, CRM, correo)',
+          'Documentación simple para que tu equipo la maneje',
+          'Medimos las horas que ahorras por semana, antes y después',
+        ],
+        msg: 'Hola Brian, quiero información sobre el Piloto de Automatización (S/ 1,850).',
+        highlight: false,
+      },
+      {
+        name: 'Tablero de Control',
+        price: 'S/ 2,400',
+        meta: '21 días',
+        pitch: 'Ves ventas, costos, stock y ganancia del día en una sola pantalla.',
+        features: [
+          'Hasta 3 fuentes de datos conectadas y consolidadas',
+          'Hasta 8 indicadores definidos contigo: los que de verdad importan',
+          'Estructura de datos limpia, confiable y lista para crecer',
+          '2 capacitaciones para que tu equipo lo use sin depender de nadie',
+          'Garantía de ajustes por 30 días',
+        ],
+        msg: 'Hola Brian, quiero información sobre el Tablero de Control (S/ 2,400).',
+        highlight: true,
+      },
+    ],
+    retainer: {
+      name: 'Plan Continuidad',
+      pitch: 'Tu área de datos y automatización, sin contratar a nadie en planilla.',
+      note: 'Sin permanencia. Primer mes al 50% si vienes de cualquier paquete de arriba. Menos de la cuarta parte de lo que cuesta un analista en planilla.',
+      tiers: [
+        {
+          name: 'Básico',
+          price: 'S/ 920',
+          period: '/mes',
+          features: [
+            'Mantenimiento de todo lo que ya construimos',
+            'Hasta 4 horas de cambios al mes',
+            'Soporte por WhatsApp en menos de 48h',
+            'Reporte mensual de salud de tus datos',
+          ],
+          msg: 'Hola Brian, quiero información sobre el Plan Continuidad - Básico (S/ 920/mes).',
+        },
+        {
+          name: 'Crecimiento',
+          price: 'S/ 1,850',
+          period: '/mes',
+          features: [
+            'Hasta 10 horas al mes',
+            'Una mejora o automatización nueva cada mes',
+            'Soporte prioritario en menos de 24h',
+            'Capacitación mensual para tu equipo',
+          ],
+          msg: 'Hola Brian, quiero información sobre el Plan Continuidad - Crecimiento (S/ 1,850/mes).',
+        },
+      ],
+    },
+    trust: '50% al inicio / 50% contra entrega · Emitimos factura · Trabajo 100% remoto',
+  },
+} as const;
+
+const t = content[lang];
+---
+
 <section class="py-16">
+  <!-- Encabezado -->
   <div class="max-w-6xl mx-auto px-4 text-center mb-12">
-    <h2 class="text-3xl font-semibold text-white">
-      Paquetes de Servicio
+    <h2 class="text-3xl font-semibold text-foreground">
+      {t.heading}
     </h2>
-    <p class="mt-3 text-gray-400 text-sm max-w-xl mx-auto">
-      Soluciones diseñadas para ordenar, controlar y escalar tu negocio.
+    <p class="mt-3 text-sm max-w-xl mx-auto text-[color:var(--color-text-secondary)]">
+      {t.subheading}
     </p>
   </div>
-<div class="grid gap-6 md:grid-cols-3 max-w-6xl mx-auto px-4">
 
-  <!-- PLAN 1 -->
-  <div class="rounded-xl p-6 border border-white/10 bg-white/5 flex flex-col justify-between">
+  <!-- Paquetes de proyecto -->
+  <div class="grid gap-6 md:grid-cols-3 max-w-6xl mx-auto px-4 items-stretch">
+    {
+      t.plans.map((plan) => (
+        <div
+          class:list={[
+            'relative rounded-xl p-6 flex flex-col justify-between bg-[color:var(--color-bg-secondary)]',
+            plan.highlight
+              ? 'border-2 border-[color:var(--accent)]'
+              : 'border border-[color:var(--color-border)]',
+          ]}
+        >
+          {plan.highlight && (
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[color:var(--accent)] text-white text-xs font-semibold px-4 py-1 rounded-full whitespace-nowrap">
+              {t.popular}
+            </div>
+          )}
 
-    <div class="space-y-4">
-      <h3 class="text-xl font-semibold text-white leading-tight">
-        Diagnóstico Ejecutivo de Negocio
-      </h3>
+          <div class="space-y-4">
+            <div>
+              <h3 class="text-xl font-semibold text-foreground leading-tight">{plan.name}</h3>
+              <p class="mt-2">
+                <span class="text-2xl font-bold text-[color:var(--accent)]">{plan.price}</span>
+                <span class="text-xs ml-2 text-[color:var(--color-text-muted)]">{plan.meta}</span>
+              </p>
+            </div>
 
-      <p class="text-sm text-gray-400">
-        Auditamos tu data dispersa y procesos para mostrarte exactamente dónde 
-        estás perdiendo dinero, tiempo y oportunidades.
+            <p class="text-sm text-[color:var(--color-text-secondary)]">{plan.pitch}</p>
+
+            <ul class="space-y-2 text-sm text-[color:var(--color-text-secondary)]">
+              {plan.features.map((f) => (
+                <li class="flex gap-2">
+                  <span class="text-[color:var(--accent)] shrink-0">✓</span>
+                  <span>{f}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <a
+            href={wa(plan.msg)}
+            target="_blank"
+            rel="noopener noreferrer"
+            class:list={[
+              'mt-6 w-full text-white font-semibold rounded-xl px-6 py-4 text-center transition-all duration-200 no-underline shadow-md hover:shadow-lg',
+              plan.highlight
+                ? 'bg-gradient-to-r from-[var(--accent)] to-[var(--accent-dark)] hover:scale-[1.02]'
+                : 'bg-[color:var(--accent)] hover:bg-[color:var(--accent-dark)]',
+            ]}
+          >
+            {t.cta}
+          </a>
+        </div>
+      ))
+    }
+  </div>
+
+  <!-- Plan recurrente -->
+  <div class="max-w-6xl mx-auto px-4 mt-10">
+    <div class="rounded-xl p-6 md:p-8 border border-[color:var(--color-border)] bg-[color:var(--color-bg-tertiary)]">
+      <div class="text-center mb-6">
+        <h3 class="text-2xl font-semibold text-foreground">{t.retainer.name}</h3>
+        <p class="mt-2 text-sm text-[color:var(--color-text-secondary)]">{t.retainer.pitch}</p>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-2">
+        {
+          t.retainer.tiers.map((tier) => (
+            <div class="rounded-lg p-5 border border-[color:var(--color-border-light)] bg-[color:var(--color-bg-secondary)] flex flex-col justify-between">
+              <div class="space-y-3">
+                <div class="flex items-baseline justify-between gap-2">
+                  <h4 class="text-lg font-semibold text-foreground">{tier.name}</h4>
+                  <p>
+                    <span class="text-xl font-bold text-[color:var(--accent)]">{tier.price}</span>
+                    <span class="text-xs text-[color:var(--color-text-muted)]">{tier.period}</span>
+                  </p>
+                </div>
+                <ul class="space-y-2 text-sm text-[color:var(--color-text-secondary)]">
+                  {tier.features.map((f) => (
+                    <li class="flex gap-2">
+                      <span class="text-[color:var(--accent)] shrink-0">✓</span>
+                      <span>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <a
+                href={wa(tier.msg)}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-5 w-full bg-[color:var(--accent)] hover:bg-[color:var(--accent-dark)] text-white font-semibold rounded-lg px-5 py-3 text-center transition-all duration-200 no-underline"
+              >
+                {t.cta}
+              </a>
+            </div>
+          ))
+        }
+      </div>
+
+      <p class="mt-6 text-center text-xs text-[color:var(--color-text-muted)] max-w-2xl mx-auto">
+        {t.retainer.note}
       </p>
-
-      <ul class="space-y-2 text-gray-300 text-sm">
-        <li>✓ Auditoría de fuentes de datos y calidad de información</li>
-  <li>✓ Diagnóstico de puntos críticos de pérdida</li>
-  <li>✓ Mapa visual de procesos y flujos de información</li>
-  <li>✓ Ranking de acciones: qué hacer primero para ver resultados rápidos</li>
-  <li>✓ Plan de acción con próximos pasos concretos</li>
-      </ul>
     </div>
 
-  <a href="#"
-   class="mt-6 w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-xl px-6 py-4 text-center transition-all duration-200 shadow-md hover:shadow-lg no-underline">
-
-  <div class="flex flex-col items-center leading-tight">
-    <span class="text-sm font-semibold tracking-wide">
-      Solicitar información
-    </span>
-    <span class="text-xs opacity-90 mt-1">
-      $199
-    </span>
+    <p class="mt-6 text-center text-xs text-[color:var(--color-text-muted)]">
+      {t.trust}
+    </p>
   </div>
-
-</a>
-
-  </div>
-
-
-  <!-- PLAN 2 -->
-  <div class="relative rounded-xl p-6 border-2 border-orange-500 bg-white/5 flex flex-col justify-between">
-
-    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-orange-500 text-black text-xs font-semibold px-4 py-1 rounded-full">
-      Más solicitado
-    </div>
-
-    <div class="space-y-4">
-      <h3 class="text-xl font-semibold text-white leading-tight">
-        Sistema de Control y Análisis (BI)
-      </h3>
-
-      <p class="text-sm text-gray-400">
-        En 30 días tendrás un dashboard profesional con claridad total sobre 
-  ingresos, costos y rentabilidad — listo para tomar decisiones.
-      </p>
-
-      <ul class="space-y-2 text-gray-300 text-sm">
-    <li>✓ Consolidación e integración de datos dispersos</li>
-  <li>✓ Estructura de datos limpia, confiable y escalable</li>
-  <li>✓ Dashboard profesional en Power BI a tu medida</li>
-  <li>✓ KPIs estratégicos: ventas, margen, cumplimiento de meta</li>
-  <li>✓ Capacitación de tu equipo para uso autónomo</li>
-      </ul>
-    </div>
-
-    <a href="#"
-   class="mt-6 w-full bg-gradient-to-r from-orange-500 to-orange-400 hover:from-orange-600 hover:to-orange-500 text-white font-bold rounded-xl px-6 py-4 text-center transition-all duration-300 shadow-lg hover:shadow-orange-500/40 hover:scale-[1.02] no-underline">
-
-  <div class="flex flex-col items-center leading-tight">
-    <span class="text-sm font-semibold tracking-wide">
-      Solicitar información
-    </span>
-    <span class="text-xs opacity-90 mt-1">
-      Desde $ 599
-    </span>
-  </div>
-
-</a>
-
-  </div>
-
-
-  <!-- PLAN 3 -->
-  <div class="rounded-xl p-6 border border-white/10 bg-white/5 flex flex-col justify-between">
-
-    <div class="space-y-4">
-      <h3 class="text-xl font-semibold text-white leading-tight">
-        Automatización y Escalamiento de Datos
-      </h3>
-
-      <p class="text-sm text-gray-400">
-        Convertimos tu operación en un sistema de datos vivo: Pipelines automáticos, 
-  reportes que se actualizan solos y alertas que avisan antes que el problema crezca.
-      </p>
-
-      <ul class="space-y-2 text-gray-300 text-sm">
-          <li>✓ Todo lo incluido en el Sistema de Control y Análisis (BI)</li>
-  <li>✓ Pipelines automáticos de extracción y consolidación de data</li>
-  <li>✓ Integración entre tus sistemas (ERP, CRM, Xlsx, Sheets, APIs, etc.)</li>
-  <li>✓ Reportes y dashboards con actualización programada</li>
-  <li>✓ Alertas automáticas ante desviaciones clave</li>
-  <li>✓ Generación automatizada de reportes ejecutivos en PDF</li>
-  <li>✓ Soporte y evolución continua del ecosistema de datos</li>
-      </ul>
-    </div>
-
-   <a href="#"
-   class="mt-6 w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-xl px-6 py-4 text-center transition-all duration-200 shadow-md hover:shadow-lg no-underline">
-
-  <div class="flex flex-col items-center leading-tight">
-    <span class="text-sm font-semibold tracking-wide">
-      Solicitar información
-    </span>
-    <span class="text-xs opacity-90 mt-1">
-      Desde $ 999
-    </span>
-  </div>
-
-</a>
-
-  </div>
-
-</div>
-
 </section>
