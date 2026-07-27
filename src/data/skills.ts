@@ -12,25 +12,25 @@ const skillsByLang: Record<Lang, Skill[]> = {
       icon: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a3 3 0 110 6 3 3 0 010-6zm0 6v6m0 0a3 3 0 100 6 3 3 0 000-6zm0 0a3 3 0 10-6 0 3 3 0 006 0zm6 0a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
       title: "Real-Time Business Control",
       description:
-        "You wait until month end to know how you did — and by then the decision was already made. I put your sales, costs, stock and profit on one screen, updated by itself.",
+        "Today you wait until month end to know how you did, when the decision has already been made. I bring your sales, costs, inventory and profit together on a single panel that updates automatically.",
     },
     {
       icon: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 18H6a4 4 0 010-8 5 5 0 019.9-1.5A4.5 4.5 0 1119 18z"/></svg>`,
       title: "Process Automation",
       description:
-        "That report you rebuild every Monday, those invoices someone types in by hand. I leave it running on its own, so your team gets those hours back for good.",
+        "The report rebuilt every Monday, the invoices someone enters by hand. I automate that repetitive work so your team recovers those hours for good.",
     },
     {
       icon: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C7 3 4 4.79 4 7v10c0 2.21 3 4 8 4s8-1.79 8-4V7c0-2.21-3-4-8-4zm0 2c3.87 0 6 .93 6 2s-2.13 2-6 2-6-.93-6-2 2.13-2 6-2zm0 6c3.87 0 6 .93 6 2s-2.13 2-6 2-6-.93-6-2 2.13-2 6-2z"/></svg>`,
       title: "Centralized, Reliable Information",
       description:
-        "The POS says one thing, the spreadsheet another, and nobody knows which one is right. I bring it all together so your numbers finally agree and you can trust them.",
+        "The system says one thing, the spreadsheet another, and nobody knows which is correct. I integrate your data sources so your numbers match and you can rely on them.",
     },
     {
       icon: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm-1 15l-4-4 1.41-1.41L11 14.17l6.59-6.59L19 9l-8 8z"/></svg>`,
       title: "Documented, Independent Processes",
       description:
-        "If the person who knows the spreadsheet goes on holiday, the business goes blind. I leave the process documented and running so it does not depend on anyone.",
+        "When the one person who understands the spreadsheet is away, the business is left in the dark. I leave every process documented and running, so it never depends on a single person.",
     },
   ],
   es: [
@@ -38,25 +38,25 @@ const skillsByLang: Record<Lang, Skill[]> = {
       icon: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a3 3 0 110 6 3 3 0 010-6zm0 6v6m0 0a3 3 0 100 6 3 3 0 000-6zm0 0a3 3 0 10-6 0 3 3 0 006 0zm6 0a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
       title: "Control del Negocio al Día",
       description:
-        "Esperas a fin de mes para saber cómo te fue — y para entonces la decisión ya la tomaste. Pongo tus ventas, costos, stock y ganancia en una sola pantalla que se actualiza sola.",
+        "Hoy esperas a fin de mes para saber cómo te fue, cuando la decisión ya está tomada. Reúno tus ventas, costos, inventario y utilidad en un solo panel que se actualiza de forma automática.",
     },
     {
       icon: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 18H6a4 4 0 010-8 5 5 0 019.9-1.5A4.5 4.5 0 1119 18z"/></svg>`,
       title: "Automatización de Procesos",
       description:
-        "Ese reporte que rearmas cada lunes, esas facturas que alguien digita a mano. Lo dejo funcionando solo, y tu equipo recupera esas horas para siempre.",
+        "El reporte que se rehace cada lunes, las facturas que alguien ingresa a mano. Automatizo ese trabajo repetitivo para que tu equipo recupere esas horas de forma definitiva.",
     },
     {
       icon: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C7 3 4 4.79 4 7v10c0 2.21 3 4 8 4s8-1.79 8-4V7c0-2.21-3-4-8-4zm0 2c3.87 0 6 .93 6 2s-2.13 2-6 2-6-.93-6-2 2.13-2 6-2zm0 6c3.87 0 6 .93 6 2s-2.13 2-6 2-6-.93-6-2 2.13-2 6-2z"/></svg>`,
       title: "Información Centralizada y Confiable",
       description:
-        "El POS dice una cosa, el Excel otra, y nadie sabe cuál está bien. Junto todo para que tus números por fin cuadren y puedas confiar en ellos.",
+        "El sistema dice una cosa, el Excel otra, y nadie sabe cuál es la correcta. Integro tus fuentes de información para que tus números coincidan y puedas confiar en ellos.",
     },
     {
       icon: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm-1 15l-4-4 1.41-1.41L11 14.17l6.59-6.59L19 9l-8 8z"/></svg>`,
       title: "Procesos Documentados e Independientes",
       description:
-        "Si el que sabe manejar el Excel se va de vacaciones, el negocio se queda ciego. Dejo el proceso documentado y andando para que no dependa de nadie.",
+        "Cuando la única persona que entiende el Excel se ausenta, el negocio se queda a ciegas. Dejo cada proceso documentado y funcionando, para que no dependa de una sola persona.",
     },
   ],
 };
